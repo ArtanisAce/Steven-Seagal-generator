@@ -1,7 +1,7 @@
 const firstPart = [
   "Asalto",
   "Yo soy",
-  "Tensión",
+  "Tension",
   "Ninja",
   "Muerte",
   "Holocausto",
@@ -11,11 +11,11 @@ const firstPart = [
   "Asesinato",
   "Ataque",
   "Vuelo",
-  "Situación",
+  "Situacion",
   "Rescate",
   "Secuestro",
   "Alarma",
-  "Evacuación",
+  "Evacuacion",
   "Venganza"
 ];
 
@@ -36,10 +36,10 @@ const secondPart = [
   "militar",
   "máximo",
   "salvaje",
-  "crítico",
-  "al límite",
-  "límite",
-  "a sangre fría",
+  "critico",
+  "al limite",
+  "limite",
+  "a sangre fria",
   "capital",
   "abierto"
 ];
