@@ -280,6 +280,8 @@ body {
 
 h1 {
   font: bold 20px sans-serif;
+  padding: 0 16px;
+  margin: 24px;
   color: white;
 }
 
@@ -301,7 +303,8 @@ h1 {
 #movie {
   font: 26px Speedeasy;
   color: red;
-  margin: 28px;
+  margin: 24px;
+  padding: 8px;
 }
 
 .movie-animation {
