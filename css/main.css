@@ -272,19 +272,40 @@ textarea {
 
 /* CUSTOM STYLE */
 
+body {
+  background-color: #000;
+  text-align: center;
+  transition: all ease-in-out 1s;
+}
+
+h1 {
+  font: bold 24px sans-serif;
+  color: white;
+}
+
 @font-face {
   font-family: Speedeasy;
   src: url("Speedeasy Speedy.otf") format("opentype");
 }
 
-/* @font-face {
-  font-family: Lethalweapon;
-  src: url("sebo____.TTF") format("truetype");
-} */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.5, 1.5);
+  }
+}
 
 #movie {
-  font-family: Speedeasy;
-  font-size: 32px;
+  font: 32px Speedeasy;
+  color: red;
+  margin: 32px;
+}
+
+.movie-animation {
+  animation: fadeIn 5s ease-in-out;
 }
 
 #generator-button {
@@ -294,9 +315,8 @@ textarea {
   border-radius: 0.15em;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  font-weight: 400;
+  font-family: sans-serif;
+  font-weight: bold;
   color: #ffffff;
   background-color: #3352ff;
   box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
@@ -305,10 +325,4 @@ textarea {
 }
 #generator-button:active {
   top: 0.1em;
-}
-@media all and (max-width: 30em) {
-   a.button6 {
-    display: block;
-    margin: 0.4em auto;
-  }
 }

@@ -34,7 +34,7 @@ const secondPart = [
   "ofensivo",
   "infinito",
   "militar",
-  "máximo",
+  "maximo",
   "salvaje",
   "critico",
   "al limite",
@@ -45,6 +45,12 @@ const secondPart = [
 ];
 
 const generator = () => {
+  const movieBox = document.getElementById("movie");
+  movieBox.classList.remove("movie-animation");
+  // Triggering reflow
+  void movieBox.offsetWidth;
+  movieBox.classList.add("movie-animation");
+
   const firstWord = makeFirstPart();
   const secondWord =
     firstWord !== "Ninja" &&
@@ -56,6 +62,7 @@ const generator = () => {
   const name = `${firstWord} ${secondWord} ${generateSequel()}`;
 
   document.getElementById("movie").innerHTML = name;
+  // movieBox.classList.remove("movie-animation");
 };
 
 const makeFirstPart = () =>
@@ -87,6 +94,5 @@ const generateSequel = () => {
   }
 };
 
-document
-  .getElementById("generator-button")
-  .addEventListener("click", generator);
+const genButton = document.getElementById("generator-button");
+genButton.addEventListener("click", generator);
