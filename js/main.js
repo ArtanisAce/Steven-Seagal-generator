@@ -17,7 +17,8 @@ const firstPart = [
   "Alarma",
   "Evacuacion",
   "Venganza",
-  "Herida"
+  "Herida",
+  "Peligro"
 ];
 
 const secondPart = [
