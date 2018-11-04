@@ -16,7 +16,8 @@ const firstPart = [
   "Secuestro",
   "Alarma",
   "Evacuacion",
-  "Venganza"
+  "Venganza",
+  "Herida"
 ];
 
 const secondPart = [
@@ -41,7 +42,8 @@ const secondPart = [
   "limite",
   "a sangre fria",
   "capital",
-  "abierto"
+  "abierto",
+  "nuclear"
 ];
 
 const generator = () => {
