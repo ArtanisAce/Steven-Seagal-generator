@@ -65,7 +65,6 @@ const generator = () => {
   const name = `${firstWord} ${secondWord} ${generateSequel()}`;
 
   document.getElementById("movie").innerHTML = name;
-  // movieBox.classList.remove("movie-animation");
 };
 
 const makeFirstPart = () =>
