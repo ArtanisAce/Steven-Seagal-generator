@@ -292,10 +292,9 @@ h1 {
 }
 
 #movie {
-  font: 28px Speedeasy;
+  font: 26px Speedeasy;
   color: red;
-  margin-bottom: 28px;
-  padding: 8px;
+  margin: 0 28px 28px 28px;
 }
 
 .movie-animation {
