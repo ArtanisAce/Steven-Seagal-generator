@@ -18,7 +18,14 @@ const firstPart = [
   "Evacuacion",
   "Venganza",
   "Herida",
-  "Peligro"
+  "Peligro",
+  "Destruccion",
+  "Aniquilacion",
+  "Defensa",
+  "Karate",
+  "Devastacion",
+  "Hecatombe",
+  "Rehen"
 ];
 
 const secondPart = [
@@ -44,7 +51,10 @@ const secondPart = [
   "a sangre fria",
   "capital",
   "abierto",
-  "nuclear"
+  "nuclear",
+  "destructivo",
+  "defensivo",
+  "a muerte"
 ];
 
 const generator = () => {

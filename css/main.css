@@ -278,16 +278,62 @@ body {
   transition: all ease-in-out 1s;
 }
 
+#main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
 h1 {
-  font: bold 20px sans-serif;
-  padding: 0 16px;
-  margin: 24px;
+  font: bold 20px Raleway Thin;
+  padding: 24px;
   color: white;
+}
+
+#movie {
+  font: 28px Speedeasy;
+  color: red;
+  margin-bottom: 28px;
+  padding: 8px;
+}
+
+.movie-animation {
+  animation: fadeIn 4s ease-in-out;
+}
+
+#generator-button {
+  display: inline-block;
+  padding: 0.7em 1.4em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.15em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font: bold 14px Raleway Thin;
+  color: white;
+  background-color: darkgray;
+  box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
+  text-align: center;
+  position: relative;
+}
+#generator-button:active {
+  top: 0.1em;
 }
 
 @font-face {
   font-family: Speedeasy;
-  src: url("Speedeasy Speedy.otf") format("opentype");
+  src: url("fonts/Speedeasy Speedy.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Raleway Thin";
+  src: url("fonts/raleway_thin-webfont.eot");
+  src: url("fonts/raleway_thin-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/raleway_thin-webfont.woff") format("woff"),
+    url("fonts/raleway_thin-webfont.ttf") format("truetype"),
+    url("fonts/raleway_thin-webfont.svg#Raleway-Thin") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @keyframes fadeIn {
@@ -298,33 +344,4 @@ h1 {
     opacity: 1;
     transform: scale(1.2, 1.2);
   }
-}
-
-#movie {
-  font: 26px Speedeasy;
-  color: red;
-  margin: 24px;
-  padding: 8px;
-}
-
-.movie-animation {
-  animation: fadeIn 5s ease-in-out;
-}
-
-#generator-button {
-  display: inline-block;
-  padding: 0.7em 1.4em;
-  margin: 0 0.3em 0.3em 0;
-  border-radius: 0.15em;
-  box-sizing: border-box;
-  text-decoration: none;
-  font: bold 14px sans-serif;
-  color: #ffffff;
-  background-color: #3352ff;
-  box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
-  text-align: center;
-  position: relative;
-}
-#generator-button:active {
-  top: 0.1em;
 }
