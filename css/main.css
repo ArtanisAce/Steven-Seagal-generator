@@ -298,7 +298,7 @@ h1 {
 }
 
 .movie-animation {
-  animation: fadeIn 4s ease-in-out;
+  animation: fadeIn 3s ease-in-out;
 }
 
 #generator-button {

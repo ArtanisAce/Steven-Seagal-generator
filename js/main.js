@@ -1,31 +1,41 @@
 const firstPart = [
-  "Asalto",
-  "Yo soy",
-  "Tension",
-  "Ninja",
-  "Muerte",
-  "Holocausto",
-  "Emergencia",
-  "Leyenda",
-  "Combate",
-  "Asesinato",
-  "Ataque",
-  "Vuelo",
-  "Situacion",
-  "Rescate",
-  "Secuestro",
-  "Alarma",
-  "Evacuacion",
-  "Venganza",
-  "Herida",
-  "Peligro",
-  "Destruccion",
-  "Aniquilacion",
-  "Defensa",
-  "Karate",
-  "Devastacion",
-  "Hecatombe",
-  "Rehen"
+  { word: "Alerta", genre: "f" },
+  { word: "Asalto", genre: "m" },
+  { word: "Amanecer", genre: "m"},
+  { word: "Yo soy", genre: "m" },
+  { word: "Tension", genre: "f" },
+  { word: "Ninja", genre: "m" },
+  { word: "Muerte", genre: "f" },
+  { word: "Holocausto", genre: "m" },
+  { word: "Emergencia", genre: "f" },
+  { word: "Leyenda", genre: "f" },
+  { word: "Combate", genre: "m" },
+  { word: "Asesinato", genre: "m" },
+  { word: "Ejecucion", genre: "f"},
+  { word: "Ataque", genre: "m" },
+  { word: "Vuelo", genre: "m" },
+  { word: "Infierno", genre: "m" },
+  { word: "Situacion", genre: "f" },
+  { word: "Justicia", genre: "f"},
+  { word: "Secuestro", genre: "m" },
+  { word: "Evacuacion", genre: "f" },
+  { word: "Venganza", genre: "f" },
+  { word: "Herida", genre: "f" },
+  { word: "Peligro", genre: "m" },
+  { word: "Destruccion", genre: "f" },
+  { word: "Aniquilacion", genre: "f" },
+  { word: "Defensa", genre: "f" },
+  { word: "Karate", genre: "m" },
+  { word: "Devastacion", genre: "f" },
+  { word: "Hecatombe", genre: "f" },
+  { word: "Rehen", genre: "m" },
+  { word: "Decision", genre: "f"},
+  { word: "Tiempo", genre: "m"},
+  { word: "Fuerza", genre: "f"},
+  { word: "Mercenario", genre: "m"},
+  { word: "Condena", genre: "f"},
+  { word: "Francotirador", genre: "m"},
+  { word: "Codigo", genre: "m"}
 ];
 
 const secondPart = [
@@ -45,16 +55,19 @@ const secondPart = [
   "militar",
   "maximo",
   "salvaje",
+  "total",
   "critico",
   "al limite",
   "limite",
   "a sangre fria",
-  "capital",
   "abierto",
   "nuclear",
   "destructivo",
   "defensivo",
-  "a muerte"
+  "a muerte",
+  "capital",
+  "perfecto",
+  "extremo"
 ];
 
 const generator = () => {
@@ -66,10 +79,7 @@ const generator = () => {
 
   const firstWord = makeFirstPart();
   const secondWord =
-    firstWord !== "Ninja" &&
-    (firstWord.slice(-1) === "n" ||
-      firstWord.slice(-1) === "a" ||
-      firstWord === "Muerte")
+    firstPart.find(option => option.word === firstWord).genre === "f"
       ? makeSecondPart(true)
       : makeSecondPart();
   const name = `${firstWord} ${secondWord} ${generateSequel()}`;
@@ -78,11 +88,11 @@ const generator = () => {
 };
 
 const makeFirstPart = () =>
-  firstPart[Math.floor(Math.random() * firstPart.length)];
+  firstPart[Math.floor(Math.random() * firstPart.length)].word;
 
-const makeSecondPart = (endInA = false) => {
+const makeSecondPart = (female = false) => {
   const generated = secondPart[Math.floor(Math.random() * secondPart.length)];
-  return endInA &&
+  return female &&
     (generated.slice(-1) !== "a" &&
       generated.slice(-1) !== "l" &&
       generated.slice(-1) !== "r" &&
@@ -99,8 +109,8 @@ const generateSequel = () => {
         ? `2 : 2`
         : 2
       : sequelChance < 15
-        ? `3 : 2`
-        : 3;
+      ? `3 : 2`
+      : 3;
   } else {
     return "";
   }
